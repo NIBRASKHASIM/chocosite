@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="pt-5">
+  <h1 class="text-center">Registration</h1>
+<div class="container">
+                <div class="row">
+                    <div class="col-md-5 mx-auto">
+                        <div class="card card-body">
+
+                            <form id="submitForm" action="{% url 'register' %}" method="post">
+                                {% csrf_token %}
+                                <div class="form-group required">
+                                    <lSabel for="username">Username </lSabel><br>
+                                    <input type="text" class="form-control text-lowercase" name="username" >
+                                </div>
+                                <div class="form-group required">
+                                    <label class="d-flex flex-row align-items-center" >Password </label>
+                                    <input type="password" class="form-control" name="password" >
+                                </div>
+                                <div class="form-group required">
+                                    <label class="d-flex flex-row align-items-center" >confirm Password </label>
+                                    <input type="password" class="form-control" name="password1" >
+                                </div>
+
+                                <div class="form-group pt-1">
+                                    <button  class="btn btn-primary btn-block" type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+<center>
+{% for msg in messages %}
+<b><h3 style="color:red">{{msg}}</h3></b>
+{% endfor %}
+</center>
+<br>
+<br>
+{% endblock %}

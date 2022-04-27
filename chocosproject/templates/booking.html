@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>ChocoLux</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <!--slick slider stylesheet -->
+  <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css' %}" />
+
+  <!-- fonts style -->
+  <link href="{% static 'https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap' %}" rel="stylesheet" />
+  <!-- slick slider -->
+
+  <link rel="stylesheet" href="{% static 'css/slick-theme.css' %}" />
+  <!-- font awesome style -->
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+
+  <link rel="stylesheet" href="{% static 'css/dropcss.css' %}">
+  <script src="{% static 'js/drop.js' %}" ></script>
+
+</head>
+
+<body>
+
+<section class="h-100 h-custom" style="background-color: #8fc4b7;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
+
+            <form class="px-md-2" action="{% url 'confirm' %}">
+
+              <div class="form-outline mb-4">
+                <input type="text" id="form3Example1q" class="form-control" />
+                <label class="form-label" for="form3Example1q">Customer Name</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="tel" id="form3Example1q" class="form-control" />
+                <label class="form-label" for="form3Example1q">Phone No</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="email" id="form3Example1q" class="form-control" />
+                <label class="form-label" for="form3Example1q">E-mail</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="text" id="form3Example1q" class="form-control" />
+                <label class="form-label" for="form3Example1q">Address</label>
+              </div>
+
+              <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example1q">District</label>
+                        <div class="input-container">
+
+                            <select id="state">
+
+                            </select>
+                        </div>
+              </div>
+              <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example1q">Branches</label>
+                        <div class="input-container">
+
+                            <select id="city">
+                              <option value="" selected="selected">Select</option>
+                            </select>
+                        </div>
+              </div>
+              <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example1q">Choclates</label>
+                    <select class="select">
+                      <option value="" selected="selected">Select</option>
+                      <option value="2"> Milk Chocolate --₹299</option>
+                      <option value="3">Amul Emerald Dark Chocolate --₹200</option>
+                      <option value="4">Semisweeet Chocolate --₹375</option>
+                      <option value="5"> Sweet German Chocolate --₹499</option>
+                      <option value="6"> Couverture Chocolate --₹859</option>
+                      <option value="7">White chocolate --₹200</option>
+                      <option value="8">Ferrero Rocher Chocolates --₹475</option>
+                      <option value="9">Parle Chocolates --₹359</option>
+                      <option value="10">Campo dark chocolate --₹259</option>
+                      <option value="11">Goldenberry chocolate --₹589</option>
+                      <option value="11">Hershey’s milk chocolate bars --₹389</option>
+                      <option value="11">Amul wafer chocolates  --₹329</option>
+                    </select>
+
+              </div>
+
+              <div class="form-outline mb-4">
+                <input type="number" id="form3Example1q" class="form-control" />
+                <label class="form-label" for="form3Example1q">Quantity</label>
+              </div>
+
+              <button type="submit" href="{% url 'confirm' %}" class="btn btn-success btn-lg mb-1">Submit</button>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </body>
+</html>
